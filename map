@@ -1,0 +1,5 @@
+import folium
+import webbrowser
+mapObj = folium.Map()
+mapObj.save('output.html’)
+webbrowser.open('output.html')
