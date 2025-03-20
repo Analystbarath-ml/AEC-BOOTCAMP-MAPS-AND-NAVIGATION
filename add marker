@@ -1,0 +1,8 @@
+import folium
+import webbrowser
+mapObj = folium.Map(location=[12.2302 , 79.07295], zoom_start=5)
+folium.Marker(location=[12.2302 , 79.07295] ).add_to(mapObj)
+mapObj.save('output.html’)
+webbrowser.open('output.html')
+
+
