@@ -1,0 +1,11 @@
+import folium 
+import webbrowser
+from folium.plugins import AntPath
+mapObj = folium.Map(location=[12.2302 , 79.07295 ], zoom_start=5) 
+pathLatLngs = [(12.2302 , 79.07295 ), (12.90577 , 79.1371 ), (11.65117 , 78.15867)] 
+pathLatLngs2 = [(8.805038 , 78.15188 ), (8.725181 , 77.68452 ), (12.2302 , 79.07295)]
+AntPath(pathLatLngs, delay=400, dash_array=[30,15], color="red", weight=3).add_to(mapObj)
+AntPath(pathLatLngs2, delay=200, dash_array=[10,50], color="blue", pulse_color="orange", weight=5, opacity=1).add_to(mapObj)
+mapObj.save('output.html’)
+webbrowser.open('output.html')
+
