@@ -1,0 +1,5 @@
+import folium
+import webbrowser
+mapObj = folium.Map(location=[12.2302 , 79.07295])
+mapObj.save('output.html’)
+webbrowser.open('output.html')
